@@ -119,3 +119,8 @@ Roles.getName('usuario básico'); // Retorna el string: 'Usuario Basico'
 Roles.getValue('Usuario Básico'); // Retorna el number: 0
 Roles.getDescription('USUARIO_BÁSICO'); // Retorna el string: 'Usuario Basico'
 ```
+
+### Test
+```
+npm run test
+```
