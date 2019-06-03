@@ -1,5 +1,5 @@
 {
-  "name": "enumsjs",
+  "name": "@arskang/enumsjs",
   "version": "1.0.0",
   "description": "Enums con JavaScript",
   "main": "index.js",

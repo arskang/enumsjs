@@ -2,12 +2,12 @@
 
 Instalación:
 ```javascript
-npm i enumsjs
+npm i @arskang/enumsjs
 ```
 
 ¿Cómo lo importo?
 ```javascript
-const Enums = require('enumsjs');
+const Enums = require('@arskang/enumsjs');
 ```
 
 ¿Cómo utilizarlo?
