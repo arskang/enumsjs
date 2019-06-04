@@ -12,6 +12,8 @@ const RolesCrazy = Enums.set([{
     description: 'Rol Moderador'
 }, 'Administrador']);
 
+console.log(RolesCrazy);
+
 console.log("\n");
 
 console.log("=== Enums simple ===".bold);
