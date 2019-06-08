@@ -12,6 +12,8 @@ const RolesCrazy = Enums.set([{
     description: 'Rol Moderador'
 }, 'Administrador']);
 
+console.log("\n");
+
 console.log(RolesCrazy);
 
 console.log("\n");
@@ -51,8 +53,24 @@ console.log("Roles.ADMINISTRADOR".green, RolesCrazy.ADMINISTRADOR);
 
 console.log("\n");
 
-console.log("Roles.getName('usuario')".green, RolesCrazy.getName('usuario'));
-console.log("Roles.getValue('usuario')".green, RolesCrazy.getValue('usuario'));
-console.log("Roles.getDescription('usuario')".green, RolesCrazy.getDescription('usuario'));
+console.log("Roles.USUARIO.getName()".green, RolesCrazy.USUARIO.getName());
+console.log("Roles.USUARIO.getValue()".green, RolesCrazy.USUARIO.getValue());
+console.log("Roles.USUARIO.getDescription()".green, RolesCrazy.USUARIO.getDescription());
+
+console.log("\n");
+
+console.log("Roles.USUARIO.isEqual(Roles.USUARIO)".green, RolesCrazy.USUARIO.isEqual(RolesCrazy.USUARIO));
+console.log("Roles.USUARIO.isEqual(0)".green, RolesCrazy.USUARIO.isEqual(0));
+console.log("Roles.USUARIO.isEqual('usuario')".green, RolesCrazy.USUARIO.isEqual('usuario'));
+
+console.log("\n");
+
+console.log("Roles.USUARIO.toString()".green, RolesCrazy.USUARIO.toString());
+console.log("Roles.USUARIO.toNumber()".green, RolesCrazy.USUARIO.toNumber());
+
+console.log("\n");
+
+console.log("Roles.convert(0)".green, RolesCrazy.convert(0));
+console.log("Roles.convert('canela')".green, RolesCrazy.convert('canela'));
 
 console.log("\n");
