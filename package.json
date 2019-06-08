@@ -1,6 +1,6 @@
 {
   "name": "@arskang/enumsjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Enums con JavaScript",
   "main": "index.js",
   "scripts": {
