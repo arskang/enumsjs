@@ -1,8 +1,9 @@
 {
   "name": "@arskang/enumsjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Enums con JavaScript",
   "main": "index.js",
+  "types": "./lib/enums.d.ts",
   "scripts": {
     "test": "node ./test/test.js"
   },
