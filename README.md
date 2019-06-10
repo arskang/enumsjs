@@ -39,7 +39,7 @@ Roles.ADMINISTRADOR; // Retorna -> Number { 4 }
 
 > *value* y *description* son opcionales, si no lleva *name* se enviará un **warning** en la consola y se omitirá en la generación del Enums
 ```javascript
-// Name no definido
+// El name ${name} tiene un tipo de dato no valido
 ```
 
 - Para acceder a las propiedades se utliza *.getName()*, *.getValue()* y *.getDescription()*.
@@ -89,6 +89,10 @@ Roles.USUARIO.isEqual(Roles.MODERADOR); // Retorna False
 Roles.USUARIO.isEqual(0); // Retorna True
 Roles.USUARIO.isEqual(2); // Retorna False
 
+// Validar Value como String
+Roles.USUARIO.isEqual('0'); // Retorna True
+Roles.USUARIO.isEqual('2'); // Retorna False
+
 // Validar Name
 //> Se puede enviar: 'Usuario', 'usuario', 'UsuariO', etc.
 Roles.USUARIO.isEqual('usuario'); // Retorna True
@@ -107,6 +111,10 @@ Roles.convert(Roles.CANELA); // Retorna -> Null
 // Convertir por Value
 Roles.convert(0); // Retorna -> Number { 0 }
 Roles.convert(87); // Retorna -> Null
+
+// Convertir por Value como String
+Roles.convert('0'); // Retorna -> Number { 0 }
+Roles.convert('87'); // Retorna -> Null
 
 // Convertir por Name
 //> Se puede enviar: 'Usuario', 'usuario', 'UsuariO', etc.
