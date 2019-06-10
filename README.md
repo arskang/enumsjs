@@ -16,12 +16,12 @@ const Enums = require('@arskang/enumsjs');
 const Roles = Enums.set(['Usuario', 'Moderador', 'Administrador']);
 //> Enums generado: USUARIO,MODERADOR,ADMINISTRADOR
 
-Roles.USUARIO; // Retorna -> Number { 0 }
-Roles.MODERADOR; // Retorna -> Number { 1 }
-Roles.ADMINISTRADOR; // Retorna -> Number { 2 }
+Roles.USUARIO; // Retorna -> Enum { 0 }
+Roles.MODERADOR; // Retorna -> Enum { 1 }
+Roles.ADMINISTRADOR; // Retorna -> Enum { 2 }
 ```
 
-> El valor inicial es 0, **todos los enums retornan un objeto Number (new Number(x))**
+> El valor inicial es 0, **todos los enums retornan un objeto Enum (new Enum(x))**
 
 - Si se necesita personalizar los *valores* y agregar una *descripción*, se envía un *objeto* con las propiedades *name*, *value* y *description* en lugar de un *string*.
 ```javascript
@@ -32,9 +32,9 @@ const Roles = Enums.set(['Usuario', {
 }, 'Administrador']);
 //> Enums generado: USUARIO,MODERADOR,ADMINISTRADOR
 
-Roles.USUARIO; // Retorna -> Number { 0 }
-Roles.MODERADOR; // Retorna -> Number { 3 }
-Roles.ADMINISTRADOR; // Retorna -> Number { 4 }
+Roles.USUARIO; // Retorna -> Enum { 0 }
+Roles.MODERADOR; // Retorna -> Enum { 3 }
+Roles.ADMINISTRADOR; // Retorna -> Enum { 4 }
 ```
 
 > *value* y *description* son opcionales, si no lleva *name* se enviará un **warning** en la consola y se omitirá en la generación del Enums
@@ -105,20 +105,20 @@ Roles.USUARIO.isEqual('moderador'); // Retorna False
 - Para convertir un valor que coincida con uno de los Enums se utiliza *.convert(value)*, *value* puede recibir: *Enums*, *strings* o *numbers*.
 ```javascript
 // Convertir por Enums
-Roles.convert(Roles.USUARIO); // Retorna -> Number { 0 }
+Roles.convert(Roles.USUARIO); // Retorna -> Enum { 0 }
 Roles.convert(Roles.CANELA); // Retorna -> Null
 
 // Convertir por Value
-Roles.convert(0); // Retorna -> Number { 0 }
+Roles.convert(0); // Retorna -> Enum { 0 }
 Roles.convert(87); // Retorna -> Null
 
 // Convertir por Value como String
-Roles.convert('0'); // Retorna -> Number { 0 }
+Roles.convert('0'); // Retorna -> Enum { 0 }
 Roles.convert('87'); // Retorna -> Null
 
 // Convertir por Name
 //> Se puede enviar: 'Usuario', 'usuario', 'UsuariO', etc.
-Roles.convert('usuario'); // Retorna -> Number { 0 }
+Roles.convert('usuario'); // Retorna -> Enum { 0 }
 Roles.convert('usuario basico'); // Retorna -> Null
 ```
 > Se puede utilizar mayúsculas/minúsculas/espacios al enviar el *name*
@@ -132,7 +132,7 @@ Roles.convert('usuario basico'); // Retorna -> Null
 const Roles = Enums.set(['Usuario Basico', 'Moderador', 'Administrador']);
 //> Enums generado: USUARIO_BASICO,MODERADOR,ADMINISTRADOR
 
-Roles.USUARIO_BASICO; // Retorna -> Number { 0 }
+Roles.USUARIO_BASICO; // Retorna -> Enum { 0 }
 ```
 
 - Si por alguna razón se utilizán caracteres especiales para los enums, solo se puede acceder a su valor de la siguiente forma:
@@ -140,7 +140,7 @@ Roles.USUARIO_BASICO; // Retorna -> Number { 0 }
 const Roles = Enums.set(['Usuario Básico', 'Moderador', 'Administrador']);
 //> Enums generado: USUARIO_BÁSICO,MODERADOR,ADMINISTRADOR
 
-Roles['USUARIO_BÁSICO']; // Retorna -> Number { 0 }
+Roles['USUARIO_BÁSICO']; // Retorna -> Enum { 0 }
 ```
 
 ### Test
